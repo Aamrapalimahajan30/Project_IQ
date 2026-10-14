@@ -1,0 +1,388 @@
+.report-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.report-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.report-view-header h1 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.report-view-header p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.print-trigger-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+}
+
+/* Printable Sheet */
+.printable-report-sheet {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: left;
+  box-shadow: var(--soft-shadow);
+  color: var(--text-primary);
+}
+
+.report-document-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1.25rem;
+}
+
+.report-branding-side {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.report-doc-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-indigo));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.report-branding-text h3 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.report-branding-text p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.report-branding-date {
+  text-align: right;
+}
+
+.report-branding-date span {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  display: block;
+}
+
+.report-branding-date p {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Verification Banner */
+.cert-verification-banner {
+  background: rgba(5, 150, 105, 0.04);
+  border: 1px solid rgba(5, 150, 105, 0.15);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.cert-verification-banner h4 {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.cert-verification-banner p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Grids */
+.report-grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .report-grid-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.report-sub-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.report-sub-card h5,
+.report-pills-bar h5,
+.report-curriculum-findings h5,
+.report-diagnostic-recommendations h5 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.85rem;
+  font-weight: 700;
+}
+
+.metadata-listing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.meta-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.meta-line span {
+  color: var(--text-secondary);
+}
+
+.meta-line strong {
+  color: var(--text-primary);
+}
+
+/* Score Pills */
+.pills-grid-layouts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .pills-grid-layouts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pill-metric-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.pill-metric-item .lbl {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.15rem;
+  font-weight: 600;
+}
+
+.pill-metric-item strong {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+/* Findings */
+.findings-sub-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1.25rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.findings-row-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.f-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.f-score {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Recommendations */
+.recs-card {
+  background: rgba(109, 40, 217, 0.02);
+  border: 1.5px dashed rgba(109, 40, 217, 0.2);
+  padding: 1.25rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recs-line {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.recs-line strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* Signatures */
+.report-signature-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+  gap: 2rem;
+}
+
+@media (max-width: 500px) {
+  .report-signature-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+}
+
+.sig-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sig-line {
+  width: 100%;
+  max-width: 200px;
+  border-bottom: 1.5px solid var(--text-secondary);
+  height: 20px;
+}
+
+.sig-line-qr {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  border: 1px dashed var(--border-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: var(--bg-deep);
+}
+
+.sig-block span {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+/* Print Media Rules */
+@media print {
+  .sidebar-container,
+  .print-hidden,
+  .collapse-toggle {
+    display: none !important;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  .printable-report-sheet {
+    background: white !important;
+    border: none !important;
+    color: black !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .report-branding-text h3,
+  .cert-verification-banner h4,
+  .meta-line strong,
+  .pill-metric-item strong,
+  .f-score,
+  .recs-line strong {
+    color: black !important;
+  }
+
+  .report-branding-text p,
+  .cert-verification-banner p,
+  .meta-line span,
+  .pill-metric-item .lbl,
+  .f-title,
+  .recs-line,
+  .sig-block span {
+    color: #4b5563 !important;
+  }
+
+  .report-sub-card,
+  .pill-metric-item,
+  .findings-sub-card,
+  .recs-card,
+  .cert-verification-banner {
+    background: transparent !important;
+    border: 1px solid #d1d5db !important;
+  }
+
+  .report-signature-row {
+    border-top: 1.5px solid #d1d5db !important;
+  }
+}
+
+.report-empty-state {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.report-empty-state h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.report-empty-state p {
+  color: var(--text-secondary);
+}
